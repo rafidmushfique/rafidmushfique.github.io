@@ -1,0 +1,147 @@
+/*master styles*/
+body
+{
+    margin: 0px;
+    background-image: url("images/kk.jpg");
+
+}
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+.navwrap
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    background-color:white ;
+    opacity: 0.4;
+    
+}
+.mid
+{
+color:black;
+}
+ul
+{
+    list-style: none;
+    display:  flex;
+    
+}
+
+.navwrap > .left > div
+{
+margin-right:20px;
+font-size:0.9em;
+text-transform: uppercase;
+}
+.navwrap >.navls >div
+{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    
+}
+.navls
+{
+    margin-right: 20px;
+}
+.navls a
+{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.navls :hover
+{
+    border-bottom: 1px solid black;
+}
+.navls a:hover
+{
+    color:black;
+}
+
+/*godo to go styles*/
+
+.item-wrapper
+{
+position: relative;
+}
+.img-bk
+{
+height: 300px;
+width: 100%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.imagetextwrap
+{
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.logowrap
+{
+    width:50%;
+    margin-bottom: 20px;
+    
+}
+.imagetextwrap .subtitle
+{
+transition: 1s;
+font-weight: 600;
+color: transparent;
+}
+ .imagetextwrap:hover .subtitle
+{
+    font-weight: 600;
+    color: lightseagreen;
+}
+.img-darken
+{
+    transition: 1s;
+    filter: brightness(10%);
+}
+.links
+{
+    color: black;
+    font-size: 1em;
+    font-style: italic;
+}
+.white-box
+{
+	
+   padding: 12px 20px;
+  margin-top: 30px ;
+  margin-bottom: 30px ;
+  margin-left: 90px ;
+  margin-right: 90px ;
+  box-sizing: border-box;
+  border: 3px;
+  background-color: whitesmoke;
+  color: black;
+  opacity: 0.9;
+  
+	
+}
+h2{
+    text-align: center;
+    color: aliceblue;
+    font-weight: 600;
+}
+table { border: 1px solid; padding: 1px;}
+
+     th, td {  border: 1px solid; padding: 10px;
+
+               text-align: center; }
