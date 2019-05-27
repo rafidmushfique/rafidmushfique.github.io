@@ -36,3 +36,48 @@ function calculate() {
     return Math.min.apply(null, this);
   };
               
+
+  function getQuote() {
+    var q1="Two things are infinite: the universe and human stupidity; and I'm not sure about the universe";
+    var q2="Java is to JavaScript what Car is to Carpet.";
+    var q3="There are two ways to write error-free programs; only the third one works.";
+    var quote = [q1,q2,q3];
+    var num=Math.floor(Math.random()*3)
+    displayQuote(quote[num]);
+}
+function displayQuote(quote) {
+    const quoteText = document.querySelector('.quote-text');
+    quoteText.textContent = quote;
+}
+
+function colorChange()
+{
+    document.getElementById("app").style.backgroundColor = "#F25959";
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p1").style.fontFamily="Arial, Helvetica, sans-serif";
+
+}
+
+function colorChange1()
+{
+    document.getElementById("app").style.backgroundColor = "#578BF3";
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p1").style.fontFamily="Verdana, Geneva, sans-serif";
+   
+}
+
+function colorChange2()
+{
+    document.getElementById("app").style.backgroundColor = "#F4B35E";
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p1").style.fontFamily="\"Times New Roman\", Times, serif";
+
+}
+
+function colorChange3()
+{
+    document.getElementById("app").style.backgroundColor = "#F680D2 ";
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p1").style.fontFamily="Georgia, serif";
+}
+

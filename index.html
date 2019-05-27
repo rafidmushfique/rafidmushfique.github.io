@@ -6,7 +6,7 @@
        <link rel="stylesheet" href="styles.css">
        <script src="js/script.js"></script>
     </head>
-    <body>
+    <body onload="getQuote()">
         <div class="container">
             <div class="navwrap">
              
@@ -164,11 +164,21 @@
                 University Website</a>
               </div>
             </div>
-            <div style="opacity:0.5">
-              <h2>
-                <q>Java is to JavaScript what car is to Carpet.</q>
-              </h2>
-            </div>
+            <div class="white-box">
+              <div class="app" id="app">
+              
+                  <section id="quotes">
+                      <div class="quote-text" id="p1"></div>
+                  </section>
+                  <section class="controls">
+                      <button type="button" class="red button" id="red" onclick="colorChange()">Red</button>
+                      <button type="button" class="blue button" id="blue" onclick="colorChange1()">Blue</button>
+                      <button type="button" class="orange button" id="orange" onclick="colorChange2()">Orange </button>
+                      <button type="button" class="pink button" id="pink" onclick="colorChange3()">Pink</button>
+                  </section>
+                  <script src="js/script.js"></script>
+              </div>
+              </div>
         </div>
         <div class="white-box">
           <a name="conv"><h3>Converter</h3></a>
