@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <title>Assignment1</title>
        <link rel="stylesheet" href="styles.css">
+       <script src="js/script.js"></script>
     </head>
     <body>
         <div class="container">
@@ -38,6 +39,11 @@
                   <a href="#External.Links">External Links</a>
                 </li>
                 </div>
+                <div class="navls"> 
+                    <li>
+                      <a href="#conv">Converter</a>
+                    </li>
+                    </div>
               </ul>
             </div>
             </div>
@@ -160,6 +166,16 @@
               </h2>
             </div>
         </div>
+        <div class="white-box">
+          <a name="conv"><h3>Converter</h3></a>
+            <input type="number" min="0" name="lb" id="in_lb">
+            <select id="state" >
+            <option value="kg_to_lb">kg to lb</option>
+            <option value="lb_to_kg">lb to kg</option>
+            </select>
+            <input type="button" value="convert" id="submit" onclick="change()"><strong> <output id="demo1"></output></strong>
+
+            </div>
         <div class="white-box">
             <p>This page was last modified on:</p>
                 <p id="demo"></p>
