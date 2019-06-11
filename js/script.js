@@ -80,4 +80,59 @@ function colorChange3()
     document.getElementById("p1").style.color = "white";
     document.getElementById("p1").style.fontFamily="Georgia, serif";
 }
+function capitilize()
+{
+    document.getElementById("textair").style.textTransform = "uppercase";
 
+}
+function clearit(){
+    document.getElementById("textair").value = "";
+};
+
+function shuffel()
+{
+    var str = document.getElementById("textair").value;
+   var array = str.split("\n");
+   console.log(array);
+   for (let i = array.length - 1; i > 0; i--)
+    {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    document.getElementById("textair").value=array.join('\n');
+
+}
+console.log(array);
+
+};
+function reverse()
+{
+    var text = document.getElementById("textair").value;
+    var result = text.split('\n').map(function(line) {
+        return line.split(" ").reverse().join(" ");
+    }).join('\n');
+    document.getElementById("textair").value = result;
+};
+function sortInput(){
+    var inputField = document.getElementById("textair");
+
+    var lineArray = inputField.value.split('\n'); //create array of strings
+    lineArray.sort(); //sort the array
+    inputField.value = lineArray.join('\n'); //join it together in the output
+}
+function strip()
+{
+   var t=document.getElementById("textair").value;
+   var array=t.split("\n");
+   t=array.join("");
+   t=t.trim();
+   document.getElementById("textair").value=t;
+   console.log(t);
+
+}
+function addNumbers()
+{
+    var t=document.getElementById("textair").value
+    var count=0;
+    var t=(count++)+t;
+    document.getElementById("textair").value=t;
+}
