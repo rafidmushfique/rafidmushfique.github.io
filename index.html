@@ -3,449 +3,408 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Md. Rafid Mushfique, a full stack developer specializing in ASP.NET, C#, SQL, JavaScript, ERP systems, and production management software."
+    />
+    <title>Md. Rafid Mushfique | Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#101828",
+              muted: "#667085",
+              panel: "#f8fafc",
+              brand: "#2563eb",
+              accent: "#0f766e",
+            },
+            boxShadow: {
+              soft: "0 20px 60px rgba(15, 23, 42, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .animate-fadeInUp {
-        animation: fadeInUp 1.5s ease-out;
+
+      .hero-grid {
+        background-image: linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+        background-size: 42px 42px;
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-800">
-    <!-- Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div
-        class="container mx-auto flex justify-between items-center px-6 py-4"
-      >
-        <h1 class="font-mono text-2xl font-bold">RAFID</h1>
-        <nav>
-          <ul class="flex space-x-6">
-            <li><a href="#about" class="hover:text-blue-500">About</a></li>
-            <li>
-              <a href="#education-work" class="hover:text-blue-500"
-                >Time Line</a
-              >
+  <body class="bg-white text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+        <a href="#hero" class="group inline-flex items-center gap-3" aria-label="Rafid Mushfique home">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-sm font-black text-white shadow-sm transition group-hover:bg-brand">
+            RM
+          </span>
+          <span class="leading-none">
+            <span class="block text-lg font-black tracking-[0.18em] text-ink">RAFID</span>
+            <span class="block text-[10px] font-bold uppercase tracking-[0.22em] text-muted">Developer</span>
+          </span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <ul class="flex items-center gap-4 text-sm font-semibold text-slate-600 sm:gap-7">
+            <li><a class="transition hover:text-brand" href="#about">About</a></li>
+            <li><a class="transition hover:text-brand" href="#experience">Experience</a></li>
+            <li><a class="transition hover:text-brand" href="#projects">Projects</a></li>
+            <li class="hidden sm:block">
+              <a class="transition hover:text-brand" href="#contact">Contact</a>
             </li>
-            <li>
-              <a href="#projects" class="hover:text-blue-500">Projects</a>
-            </li>
-
-            <!-- <li><a href="#contact" class="hover:text-blue-500">Contact</a></li> -->
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="bg-blue-500 text-white py-20">
-      <div class="container mx-auto text-center animate-fadeInUp">
-        <h2 class="text-4xl md:text-6xl font-bold">Hi, I'm Rafid!</h2>
-        <p class="text-lg md:text-2xl mt-4">
-          I build modern and responsive web applications.
-        </p>
-        <a
-          href="./file/md rafid mushfique.pdf"
-          download="md-rafid-mushfique.pdf"
-          class="mt-6 inline-block bg-white text-blue-500 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100"
-        >
-          Download Resume
-        </a>
-      </div>
-    </section>
+    <main>
+      <section id="hero" class="hero-grid overflow-hidden bg-panel">
+        <div class="mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
+          <div>
+            <p class="mb-5 inline-flex rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-semibold text-brand shadow-sm">
+              Full Stack Developer based in Melbourne
+            </p>
+            <h1 class="max-w-4xl text-5xl font-bold leading-tight text-ink sm:text-6xl lg:text-7xl">
+              Building practical software for teams, operations, and growth.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
+              I am Md. Rafid Mushfique, a developer with experience across ASP.NET, C#, SQL,
+              JavaScript, ERP systems, and production management platforms. I enjoy turning
+              business problems into reliable tools people can use every day.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="./file/md rafid mushfique.pdf"
+                download="md-rafid-mushfique.pdf"
+                class="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-blue-700"
+              >
+                Download Resume
+              </a>
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-brand hover:text-brand"
+              >
+                View Projects
+              </a>
+            </div>
+            <dl class="mt-10 grid max-w-2xl grid-cols-3 gap-4 border-t border-slate-200 pt-6">
+              <div>
+                <dt class="text-2xl font-bold text-ink">3+</dt>
+                <dd class="mt-1 text-sm text-muted">Years experience</dd>
+              </div>
+              <div>
+                <dt class="text-2xl font-bold text-ink">ERP</dt>
+                <dd class="mt-1 text-sm text-muted">Business systems</dd>
+              </div>
+              <div>
+                <dt class="text-2xl font-bold text-ink">Master's</dt>
+                <dd class="mt-1 text-sm text-muted">Information Technology (Professional Computing)</dd>
+              </div>
+            </dl>
+          </div>
 
-    <!-- About Section -->
-    <section id="about" class="py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-        <div class="flex flex-col md:flex-row items-center md:space-x-6">
-          <img
-            src="img/pp.jpg"
-            alt="Profile Picture"
-            class="rounded-full w-40 h-40"
-          />
-          <div class="mt-6 md:mt-0 text-lg text-gray-600">
-            <p>
-              I am Md. Rafid Mushfique, a passionate developer with a Bachelor's
-              degree in Computer Science, currently pursuing my Master's in
-              Information Technology at Swinburne University of Technology.
-            </p>
-            <p class="mt-4">
-              With extensive expertise in ASP.NET, C#, SQL, and JavaScript, I
-              specialize in creating custom ERP solutions, web applications, and
-              production management systems. My strong problem-solving skills
-              and dedication to continuous learning drive me to deliver
-              high-quality software solutions.
-            </p>
-            <p class="mt-4">
-              I am particularly interested in full stack development, machine
-              learning and cognitive science.
-            </p>
+          <div class="relative mx-auto w-full max-w-sm lg:max-w-md">
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft">
+              <img
+                src="img/profile-bridge.jpg"
+                alt="Portrait of Md. Rafid Mushfique"
+                class="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[42%_center]"
+              />
+              <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <p class="font-bold text-ink">Core stack</p>
+                  <p class="mt-1 text-muted">ASP.NET, C#, SQL, JS</p>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <p class="font-bold text-ink">Focus</p>
+                  <p class="mt-1 text-muted">Full stack systems</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Education & Work Experience Section -->
-    <!-- Education & Work Experience Section -->
-    <section id="education-work" class="bg-gray-200 py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Time Line</h2>
+      </section>
 
-        <div class="flex justify-between items-start">
-          <!-- Education Timeline (Right) -->
-          <div class="w-full md:w-1/2 pl-4 relative">
+      <section id="about" class="py-20">
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p
-                class="font-semibold text-dimWhite text-[20px] leading-[30.8px]"
-              >
-                Education
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">About</p>
+              <h2 class="mt-3 text-4xl font-bold tracking-tight text-ink">A developer who understands operations.</h2>
+            </div>
+            <div class="space-y-5 text-lg leading-8 text-muted">
+              <p>
+                I am currently pursuing a Master of Information Technology in Professional
+                Computing at Swinburne University of Technology. Before that, I worked on
+                enterprise and internal business systems for manufacturing, fleet management,
+                e-commerce, accounting, reporting, and service workflows.
               </p>
-              <ol
-                class="relative border-l border-gray-200 dark:border-blue-700"
-              >
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-blue-700 dark:bg-blue-500"
-                  ></div>
-                  <time
-                    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-                    >2024 - Present</time
-                  >
-                  <p class="font-bold text-black">
-                    Master of Information Technology (Professional Computing)
-                  </p>
-                  <p class="mb-4 text-base font-normal text-dimWhite">
-                    Swinburne University of Technology, Melbourne, Australia
-                  </p>
-                </li>
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-blue-700 dark:bg-blue-500"
-                  ></div>
-                  <time
-                    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-                    >2017-2021</time
-                  >
-                  <p class="font-bold text-black">
-                    Bachelor of Science in Computer Science
-                  </p>
-                  <p class="mb-4 text-base font-normal text-dimWhite">
-                    BRAC University, Dhaka, Bangladesh
-                  </p>
-                </li>
-              </ol>
+              <p>
+                My work is strongest where software meets real organizational process:
+                designing reliable data flows, improving visibility for managers, and making
+                complex work easier for daily users.
+              </p>
             </div>
           </div>
-          <!-- Work Experience Timeline (Left) -->
-          <div class="w-full md:w-1/2 pr-4 relative">
+
+          <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="font-bold text-ink">Backend</h3>
+              <p class="mt-3 text-muted">ASP.NET, C#, SQL, Crystal Reports, ERP modules</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="font-bold text-ink">Frontend</h3>
+              <p class="mt-3 text-muted">JavaScript, responsive UI, admin portals, dashboards</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="font-bold text-ink">Interests</h3>
+              <p class="mt-3 text-muted">Full stack development, machine learning, cognitive science</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="bg-slate-950 py-20 text-white">
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p
-                class="font-semibold text-dimWhite text-[20px] leading-[30.8px]"
-              >
-                Experience
-              </p>
-              <ol
-                class="relative border-l border-gray-200 dark:border-blue-700"
-              >
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-blue-700 dark:bg-blue-500"
-                  ></div>
-                  <time class="mb-1 text-sm font-normal leading-none"
-                    >February 2023 - January 2025 (2 years)</time
-                  >
-                  <p class="text-lg font-semibold text-black dark:text-black">
-                    Software Engineer
-                  </p>
-                  <p class="font-poppins font-bold text-black">ACI Limited</p>
-                  <p class="mb-4 text-base font-normal text-gray-600">
-                    Contributions:
-                  </p>
-                  <ol
-                    class="pl-6 border-l border-blue-200 dark:border-blue-700"
-                  >
-                    <li class="text-dimWhite">
-                      - Continuously developing Yamaha Production Management
-                      System (YPMS)
-                    </li>
-                    <li class="text-dimWhite">
-                      - Designed and Developed Vehicle Management System ,
-                      Maintenance Complaint Ticket System, Workshop Tools
-                      Management System
-                    </li>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-teal-300">Timeline</p>
+              <h2 class="mt-3 text-4xl font-bold tracking-tight">Education and experience</h2>
+            </div>
+            <p class="max-w-xl text-slate-300">
+              A practical path through computer science, enterprise development, and graduate study.
+            </p>
+          </div>
 
-                    <li class="text-dimWhite">
-                      - One of my key Achievement is, developing a
-                      <b>Bidding System</b> for Vehicle Management to streamline
-                      outsourcing by enabling vendors to <br />bid on
-                      transportation routes, ensuring cost efficiency and
-                      optimal vendor selection.
-                    </li>
-                  </ol>
-                </li>
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-blue-700 dark:bg-blue-500"
-                  ></div>
-                  <time class="mb-1 text-sm font-normal leading-none"
-                    >May 2022 - January 2023 (9 months)</time
-                  >
-                  <p class="text-lg font-semibold text-black dark:text-black">
-                    Jr. Software Engineer
-                  </p>
-                  <p class="font-poppins font-bold text-black">
-                    LEADS Corporation Ltd.
-                  </p>
-                  <p class="mb-4 text-base font-normal text-gray-600">
-                    Contributions:
-                  </p>
-                  <ol
-                    class="pl-6 border-l border-blue-200 dark:border-blue-700"
-                  >
-                    <li class="text-dimWhite">
-                      - Maintained and enhanced multiple modules in Centerpoint
-                      ERP, a solution developed by Leads Corporation.
-                    </li>
-                    <li class="text-dimWhite">
-                      - Designed Crystal Reports and managed database data,
-                      enabling clients to make informed decisions through key
-                      insights.
-                    </li>
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 class="mb-5 text-xl font-bold">Education</h3>
+              <div class="space-y-4">
+                <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <time class="text-sm font-semibold text-teal-300">2024 - Present</time>
+                  <h4 class="mt-2 text-lg font-bold">Master of Information Technology</h4>
+                  <p class="mt-2 text-slate-300">Professional Computing, Swinburne University of Technology, Melbourne</p>
+                </article>
+                <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <time class="text-sm font-semibold text-teal-300">2017 - 2021</time>
+                  <h4 class="mt-2 text-lg font-bold">Bachelor of Science in Computer Science</h4>
+                  <p class="mt-2 text-slate-300">BRAC University, Dhaka, Bangladesh</p>
+                </article>
+              </div>
+            </div>
 
-                    <li class="text-dimWhite">
-                      <p>
-                        - One of Key Achievement is, developing and implementing
-                        the
-                        <b>Advance Journal System</b> for salary deductions to
-                        <br />
-                        company-provided assets (mobile phones, motorcycles).
-                        This system facilitated the automated deduction process
-                        based on specific <br />terms and condition tied to
-                        employee loans.
-                      </p>
-                    </li>
-                  </ol>
-                </li>
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-blue-700 dark:bg-blue-500"
-                  ></div>
-                  <time class="mb-1 text-sm font-normal leading-none"
-                    >April 2022 - October 2022 (6 months)</time
-                  >
-                  <p class="text-lg font-semibold text-black dark:text-black">
-                    Software Engineer
+            <div>
+              <h3 class="mb-5 text-xl font-bold">Experience</h3>
+              <div class="space-y-4">
+                <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <time class="text-sm font-semibold text-teal-300">February 2023 - January 2025</time>
+                  <h4 class="mt-2 text-lg font-bold">Software Engineer, ACI Limited</h4>
+                  <p class="mt-3 text-slate-300">
+                    Developed internal business applications, workflow tools, and vendor coordination features that improved daily operations.
                   </p>
-                  <p class="font-poppins font-bold text-black">
-                    Ecommerce (AjkerDeal.Com)
+                </article>
+                <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <time class="text-sm font-semibold text-teal-300">May 2022 - January 2023</time>
+                  <h4 class="mt-2 text-lg font-bold">Jr. Software Engineer, LEADS Corporation Ltd.</h4>
+                  <p class="mt-3 text-slate-300">
+                    Maintained Centerpoint ERP modules, designed Crystal Reports, and implemented an advance journal system for asset-related salary deductions.
                   </p>
-                  <p class="mb-4 text-base font-normal text-gray-600">
-                    Contributions:
+                </article>
+                <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <time class="text-sm font-semibold text-teal-300">April 2022 - October 2022</time>
+                  <h4 class="mt-2 text-lg font-bold">Software Engineer, AjkerDeal.com</h4>
+                  <p class="mt-3 text-slate-300">
+                    Enhanced e-commerce operations through a content management system, admin portal, and live video shopping platform.
                   </p>
-                  <ol
-                    class="pl-6 border-l border-blue-200 dark:border-blue-700"
-                  >
-                    <li class="text-dimWhite">
-                      - Contributed to the enhancement of the e-commerce
-                      platform.
-                    </li>
-                    <li class="text-dimWhite">
-                      - Designed and devleoped Content Management System , Admin
-                      portal for the Ecommerce website.
-                    </li>
-
-                    <li class="text-dimWhite">
-                      <p>
-                        - One of Key Achievement is, Developed the
-                        <b>Live Video Shopping</b> platform, enabling businesses
-                        to live stream and engage with customers <br />
-                        in real-time to sell products. Customers could purchase
-                        items during the live stream or request product
-                        demonstrations, enhancing interaction <br />
-                        with businesses. This innovative solution helped
-                        businesses maintain operations and stay connected with
-                        customers during the Covid-19 lockdown.
-                      </p>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+                </article>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-gray-200 py-20">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="img/pms.jpg" alt="PMS" class="w-full" />
-            <div class="p-6">
-              <h3 class="text-xl font-bold">Production Management System</h3>
-              <p class="text-gray-600 mt-2">
-                A comprehensive system designed to streamline and optimize the
-                production process by managing inventory, production scheduling,
-                and resource allocation. This system is tailored for efficient
-                operation and scalability across industries.
-              </p>
-              <a
-                href="https://github.com/rafidmushfique/ProductionManagementSystem"
-                target="_blank"
-                class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
-              >
-                View on GitHub
-              </a>
-            </div>
+      <section id="projects" class="bg-panel py-20">
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="mb-12 max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Projects</p>
+            <h2 class="mt-3 text-4xl font-bold tracking-tight text-ink">Featured work from GitHub</h2>
+            <p class="mt-4 text-lg leading-8 text-muted">
+              A curated set of public repositories that show AI experimentation, API design, game development, and ASP.NET fundamentals.
+            </p>
           </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="img/vms.jpg" alt="VMS" class="w-full" />
-            <div class="p-6">
-              <h3 class="text-xl font-bold">Vehicle Management System</h3>
-              <p class="text-gray-600 mt-2">
-                A robust system designed to track and manage vehicle
-                maintenance, usage history, and data on tire replacements. It
-                allows fleet managers to monitor vehicle health, manage tire
-                lifecycle, and ensure timely maintenance, enhancing overall
-                operational efficiency.
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-xl font-black text-brand">
+                AI
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs font-bold uppercase tracking-[0.14em] text-muted">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>CodeLlama</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-bold text-ink">AI Code Reviewer</h3>
+              <p class="mt-3 leading-7 text-muted">
+                A Streamlit app that reviews uploaded project ZIP files against PDF coding standards, producing issue lists, severity labels, suggestions, scores, and downloadable reports.
               </p>
               <a
-                href="https://github.com/rafidmushfique/VehicleManagementSystem"
+                href="https://github.com/rafidmushfique/AI-CodeReviewer"
                 target="_blank"
-                class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex font-bold text-brand hover:text-blue-700"
               >
-                View on GitHub
+                View repository
               </a>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="img/cts.jpg" alt="Project 3" class="w-full" />
-            <div class="p-6">
-              <h3 class="text-xl font-bold">Complaint Ticket System</h3>
-              <p class="text-gray-600 mt-2">
-                An efficient service management system designed to handle
-                customer complaints, track resolutions, and improve customer
-                satisfaction. The system enables users to submit complaints,
-                track progress, and receive feedback, while managers can assign,
-                prioritize, and resolve tickets in real-time.
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-xl font-black text-accent">
+                API
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs font-bold uppercase tracking-[0.14em] text-muted">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>REST</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-bold text-ink">Yolngu Dictionary API</h3>
+              <p class="mt-3 leading-7 text-muted">
+                A FastAPI REST service that serves a JSON dictionary of Yolngu words and meanings, with a structured service layer, Pydantic models, search, and pagination.
               </p>
               <a
-                href="https://github.com/rafidmushfique/ComplaintTicketService"
+                href="https://github.com/rafidmushfique/yolnguAPI"
                 target="_blank"
-                class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex font-bold text-brand hover:text-blue-700"
               >
-                View on GitHub
+                View repository
+              </a>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+              <div class="-mx-6 -mt-6 mb-6 overflow-hidden rounded-t-2xl bg-slate-900">
+                <img
+                  src="img/foxhunt.gif"
+                  alt="FoxHunt gameplay preview"
+                  loading="lazy"
+                  class="aspect-video w-full object-cover"
+                />
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs font-bold uppercase tracking-[0.14em] text-muted">
+                <span>Godot</span>
+                <span>GDScript</span>
+                <span>Game Dev</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-bold text-ink">FoxHunt</h3>
+              <p class="mt-3 leading-7 text-muted">
+                A 2D side-scrolling platformer built in Godot where players collect items, avoid hazards, use teleporters, and progress through pixel-art levels.
+              </p>
+              <a
+                href="https://github.com/rafidmushfique/FoxHunt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex font-bold text-brand hover:text-blue-700"
+              >
+                View repository
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20">
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="rounded-3xl bg-ink px-6 py-12 text-white shadow-soft sm:px-10 lg:flex lg:items-center lg:justify-between">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.2em] text-teal-300">Contact</p>
+              <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Let us build something useful.</h2>
+              <p class="mt-4 max-w-2xl text-slate-300">
+                I am open to full stack roles, software engineering opportunities, and collaborative projects.
+              </p>
+            </div>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0">
+              <button
+                type="button"
+                id="copy-email"
+                data-email="rafidmushfique@gmail.com"
+                class="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-ink transition hover:bg-slate-100"
+              >
+                Copy Email
+              </button>
+              <a
+                href="https://github.com/rafidmushfique"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center rounded-md border border-white/30 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+              >
+                GitHub
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Recommendations Section -->
-    <section id="recommendations" class="py-20" style="display: none">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Recommendations</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="John Doe"
-              class="w-20 h-20 rounded-full mx-auto"
-            />
-            <h3 class="text-xl font-bold mt-4">John Doe</h3>
-            <p class="text-gray-600 italic mt-2">
-              "Rafid is an exceptional developer who consistently delivers
-              high-quality results. His dedication and problem-solving skills
-              are truly impressive."
-            </p>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="Jane Smith"
-              class="w-20 h-20 rounded-full mx-auto"
-            />
-            <h3 class="text-xl font-bold mt-4">Jane Smith</h3>
-            <p class="text-gray-600 italic mt-2">
-              "Working with Rafid has been a pleasure. His ability to understand
-              complex problems and provide effective solutions is remarkable."
-            </p>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="Alex Johnson"
-              class="w-20 h-20 rounded-full mx-auto"
-            />
-            <h3 class="text-xl font-bold mt-4">Alex Johnson</h3>
-            <p class="text-gray-600 italic mt-2">
-              "Rafid's expertise in ASP.NET and web development is unparalleled.
-              He is a true asset to any team."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20" style="display: none">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
-        <form class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-8">
-          <div class="mb-4">
-            <label for="name" class="block font-bold mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="w-full border border-gray-300 rounded-lg p-3"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block font-bold mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              class="w-full border border-gray-300 rounded-lg p-3"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block font-bold mb-2">Message</label>
-            <textarea
-              id="message"
-              rows="5"
-              class="w-full border border-gray-300 rounded-lg p-3"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="bg-blue-500 text-white px-6 py-3 rounded-lg w-full hover:bg-blue-600"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="container mx-auto text-center">
-        <p>&copy; 2025 Rafid Mushfique. All rights reserved.</p>
+    <footer class="border-t border-slate-200 py-8">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 Md. Rafid Mushfique. All rights reserved.</p>
+        <a class="font-semibold text-slate-700 hover:text-brand" href="#hero">Back to top</a>
       </div>
     </footer>
+
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-md bg-slate-950 px-4 py-3 text-sm font-semibold text-white opacity-0 shadow-soft transition duration-300"
+    >
+      Email address copied
+    </div>
+
+    <script>
+      const copyEmailButton = document.getElementById("copy-email");
+      const toast = document.getElementById("toast");
+      let toastTimeout;
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.remove("opacity-0");
+        toast.classList.add("opacity-100");
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove("opacity-100");
+          toast.classList.add("opacity-0");
+        }, 2200);
+      }
+
+      copyEmailButton.addEventListener("click", async () => {
+        const email = copyEmailButton.dataset.email;
+
+        try {
+          await navigator.clipboard.writeText(email);
+          showToast("Email address copied");
+        } catch {
+          const fallbackInput = document.createElement("input");
+          fallbackInput.value = email;
+          document.body.appendChild(fallbackInput);
+          fallbackInput.select();
+          document.execCommand("copy");
+          fallbackInput.remove();
+          showToast("Email address copied");
+        }
+      });
+    </script>
   </body>
 </html>
